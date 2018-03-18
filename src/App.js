@@ -5,6 +5,17 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      switch: true
+    }
+  }
+  changeSwitch = () => {
+    this.setState({
+      switch: !this.state.switch
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -12,10 +23,12 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo"/>
           <h1 className="App-title" style={{
             color: 'white'
-          }}>Custom boilerplate</h1>
+          }}>Custom React boilerplate</h1>
         </header>
         <p className="App-intro">
-          <Switch defaultChecked/>
+          {`the switch state is: ${this.state.switch}`}
+          <br/>
+          <Switch onClick={this.changeSwitch} checked={this.state.switch}/>
         </p>
       </div>
     );
