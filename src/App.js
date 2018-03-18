@@ -1,23 +1,12 @@
 import React, {Component} from 'react';
 import {Route} from 'react-router-dom';
-import {Switch} from 'antd';
-import About from './components/About';
 import 'antd/dist/antd.css';
+import SwitchDemoPage from './views/SwitchDemoPage';
+import AboutPage from './views/AboutPage';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      switch: true
-    }
-  }
-  changeSwitch = () => {
-    this.setState({
-      switch: !this.state.switch
-    })
-  }
   render() {
     return (
       <div className="App">
@@ -27,13 +16,11 @@ class App extends Component {
             color: 'white'
           }}>Custom React boilerplate</h1>
         </header>
-        <p className="App-intro">
-          {`the switch state is: ${this.state.switch}`}
-          <br/>
-          <Switch onClick={this.changeSwitch} checked={this.state.switch}/>
-        </p>
         <div>
-          <Route path="/about" component={About}/>
+          <SwitchDemoPage/>
+        </div>
+        <div>
+          <Route path="/about" component={AboutPage}/>
         </div>
       </div>
     );
