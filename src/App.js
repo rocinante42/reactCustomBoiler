@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {Route} from 'react-router-dom';
 import {Switch} from 'antd';
+import About from './components/About';
 import 'antd/dist/antd.css';
 import logo from './logo.svg';
 import './App.css';
@@ -30,6 +32,9 @@ class App extends Component {
           <br/>
           <Switch onClick={this.changeSwitch} checked={this.state.switch}/>
         </p>
+        <div>
+          <Route path="/about" component={About}/>
+        </div>
       </div>
     );
   }
