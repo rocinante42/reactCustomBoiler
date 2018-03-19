@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Route} from 'react-router-dom';
 import 'antd/dist/antd.css';
-import SwitchDemoPage from './views/SwitchDemoPage';
-import AboutPage from './views/AboutPage';
+import SwitchDemoPage from './components/views/SwitchDemoPage';
+import AboutPage from './components/views/AboutPage';
 import logo from './logo.svg';
 import './App.css';
 

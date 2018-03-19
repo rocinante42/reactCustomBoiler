@@ -16,8 +16,11 @@ class SwitchDemo extends Component {
   render() {
     return (
       <div>
-        <Card style={{
-          width: 300
+        <Card
+          style={{
+          width: 300,
+          marginLeft: 'auto',
+          marginRight: 'auto'
         }}>
           <p className="App-intro">
             {`The switch state is: ${this.state.switch}`}
